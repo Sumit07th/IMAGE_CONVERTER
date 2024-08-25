@@ -7,7 +7,7 @@ function Home() {
         <div className="min-h-screen bg-gray-200">
             <Navbar />
             <div className="container mx-auto px-6 py-16 pt-24">
-                <h1 className="text-4xl font-bold mb-8 text-gray-900 text-center">Transform Your Images with Ease</h1>
+                <h1 className="text-4xl font-bold mb-8 text-gray-900 text-center">TransForm Your Images with Ease</h1>
                 <p className="text-lg text-gray-700 mb-12 text-center">
                     Explore our suite of image processing tools designed to help you convert, crop, resize, and enhance your images effortlessly. Choose an action below to get started and make your images perfect in no time.
                 </p>
