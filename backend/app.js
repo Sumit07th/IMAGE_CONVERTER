@@ -15,7 +15,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // CORS Middleware (optional, if needed for cross-origin requests)
-app.use(cors());
+const corsOptions = {
+  origin: 'https://image-converter-app.vercel.app', // Replace with your frontend domain
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 // Connect to MongoDB
 const connectDB = async () => {
