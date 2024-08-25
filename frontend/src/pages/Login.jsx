@@ -5,6 +5,7 @@ import { useSetRecoilState } from 'recoil';
 import { authState } from '../recoil/atoms.js';
 import axiosInstance from "../utils/axiosInstance.js";
 import { Link } from 'react-router-dom';
+import { FaTimes } from 'react-icons/fa'; // Import the cross icon
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -40,9 +41,19 @@ const Login = () => {
         }
     };
 
+    const handleClose = () => {
+        navigate('/');
+    };
+
     return (
         <div className="flex justify-center items-center h-screen bg-gray-100">
-            <div className="w-full max-w-md p-8 bg-white shadow-lg rounded-lg">
+            <div className="relative w-full max-w-md p-8 bg-white shadow-lg rounded-lg">
+                <button
+                    onClick={handleClose}
+                    className="absolute top-4 right-4 text-red-600 hover:text-red-800 transition duration-200"
+                >
+                    <FaTimes size={24} />
+                </button>
                 <h2 className="text-3xl font-extrabold mb-6 text-center text-blue-600">Login</h2>
                 {error && <p className="text-red-500 text-center mb-4">{error}</p>}
                 <form onSubmit={handleLogin}>
