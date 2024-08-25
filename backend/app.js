@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // CORS Middleware (optional, if needed for cross-origin requests)
 app.use(cors({
-    origin: "*",
+    origin: "https://image-converter-app.vercel.app",
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
 }));
