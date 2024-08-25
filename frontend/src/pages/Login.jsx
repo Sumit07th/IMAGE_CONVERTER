@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 import { authState } from '../recoil/atoms.js';
 import axiosInstance from "../utils/axiosInstance.js";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -74,7 +75,7 @@ const Login = () => {
                 </form>
                 <div className="mt-4 text-center">
                     <p className="text-gray-600 text-sm">
-                        Don't have an account? <a href="/SignUp" className="text-blue-600 hover:underline">Sign Up</a>
+                        Don't have an account? <Link to="/SignUp" className="text-blue-600 hover:underline">Sign Up</Link>
                     </p>
                 </div>
             </div>
