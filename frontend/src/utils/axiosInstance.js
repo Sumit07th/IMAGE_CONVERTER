@@ -3,7 +3,7 @@ const BASE_URL = "https://image-converter-beige.vercel.app";
 
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
-    timeout: 10000,
+    timeout: 0,
     headers: {
         "Content-Type": "application/json"
     },
